@@ -6,14 +6,16 @@ Plug 'ryanoasis/vim-devicons'  " icons
 
 "navigation
 Plug 'preservim/nerdtree' " tree file viewer
-let NERDTreeShowHidden=1  " show hidden files
+let NERDTreeShowHidden=1
 
 "code
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " lang server
 Plug 'jiangmiao/auto-pairs'                     " brackets
 Plug 'kien/ctrlp.vim'                           " file searching
 Plug 'tpope/vim-commentary'                     " comments
-Plug 'jackguo380/vim-lsp-cxx-highlight'         " c++ syntax highlight
+
+" syntax highlight
+Plug 'jackguo380/vim-lsp-cxx-highlight'                " c++
 
 "git
 Plug 'airblade/vim-gitgutter' " shows diffs
@@ -28,6 +30,7 @@ colorscheme deep-space
 
 syntax on
 set number
+set colorcolumn=80
 
 "tab
 set expandtab   
@@ -43,8 +46,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 
 "functions
-
-"deep-space's dependency
 function! IsHexColorLight(color) abort
   let l:raw_color = trim(a:color, '#')
 
