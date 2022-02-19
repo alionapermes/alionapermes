@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline' " status bar
 Plug 'ryanoasis/vim-devicons'  " icons
 
 "navigation
+Plug 'preservim/tagbar'   " tags
 Plug 'preservim/nerdtree' " tree file viewer
 let NERDTreeShowHidden=1
 
@@ -13,9 +14,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " lang server
 Plug 'jiangmiao/auto-pairs'                     " brackets
 Plug 'kien/ctrlp.vim'                           " file searching
 Plug 'tpope/vim-commentary'                     " comments
+Plug 'octol/vim-cpp-enhanced-highlight'
+let g:cpp_class_scope_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
 
 " syntax highlight
-Plug 'jackguo380/vim-lsp-cxx-highlight'                " c++
+" Plug 'jackguo380/vim-lsp-cxx-highlight' " c++ (ccls only)
+Plug 'ionide/ionide-vim'
 
 "git
 Plug 'airblade/vim-gitgutter' " shows diffs
@@ -42,6 +48,7 @@ set background=dark
 set termguicolors
 
 nnoremap <C-t> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 
 
