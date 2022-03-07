@@ -14,13 +14,21 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " lang server
 Plug 'jiangmiao/auto-pairs'                     " brackets
 Plug 'kien/ctrlp.vim'                           " file searching
 Plug 'tpope/vim-commentary'                     " comments
+" Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'cdelledonne/vim-cmake'
+let g:cmake_build_dir_location = './build'
+let g:cmake_default_config = ''
+
 Plug 'octol/vim-cpp-enhanced-highlight'
 let g:cpp_class_scope_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
+Plug 'alepez/vim-gtest'
+let g:gtest#gtest_command = './build/bin/test'
+
 
 " syntax highlight
-" Plug 'jackguo380/vim-lsp-cxx-highlight' " c++ (ccls only)
 Plug 'ionide/ionide-vim'
 
 "git
@@ -36,6 +44,7 @@ colorscheme deep-space
 
 syntax on
 set number
+set nohlsearch
 set colorcolumn=80
 
 "tab
