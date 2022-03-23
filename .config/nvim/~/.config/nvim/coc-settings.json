@@ -1,0 +1,10 @@
+{
+    "languageserver": {
+        "coc-clangd": {
+            "command": "clangd",
+            "filetypes": ["h", "hpp", "c", "cc", "cpp", "c++"],
+            "rootPatterns": ["compile_commands.json", ".git"]
+        }
+    }
+}
+
