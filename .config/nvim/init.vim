@@ -2,12 +2,11 @@ call plug#begin()
 
 "gui
 Plug 'vim-airline/vim-airline' " status bar
-Plug 'ryanoasis/vim-devicons'  " icons
 
 "navigation
-Plug 'preservim/tagbar'   " tags
-Plug 'preservim/nerdtree' " tree file viewer
-let NERDTreeShowHidden=1
+Plug 'preservim/tagbar'             " tags
+Plug 'kyazdani42/nvim-tree.lua'     " files tree
+Plug 'kyazdani42/nvim-web-devicons' " icons
 
 "code
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " lang server
@@ -39,6 +38,8 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 
 call plug#end()
 
+lua require'nvim-tree'.setup {}
+lua require'nvim-tree'.toggle(false, false)
 
 colorscheme deep-space
 
@@ -58,7 +59,6 @@ set shiftwidth=4
 set background=dark
 set termguicolors
 
-nnoremap <C-t> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 
@@ -67,9 +67,9 @@ nmap <F8> :TagbarToggle<CR>
 function! IsHexColorLight(color) abort
   let l:raw_color = trim(a:color, '#')
 
-  let l:red   = str2nr(substitute(l:raw_color, '(.{2}).{4}', '1', 'g'), 16)
+  let l:red = str2nr(substitute(l:raw_color, '(.{2}).{4}', '1', 'g'), 16)
   let l:green = str2nr(substitute(l:raw_color, '.{2}(.{2}).{2}', '1', 'g'), 16)
-  let l:blue  = str2nr(substitute(l:raw_color, '.{4}(.{2})', '1', 'g'), 16)
+  let l:blue = str2nr(substitute(l:raw_color, '.{4}(.{2})', '1', 'g'), 16)
 
   let l:brightness = ((l:red * 299) + (l:green * 587) + (l:blue * 114)) / 1000
 
