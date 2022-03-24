@@ -39,7 +39,7 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 call plug#end()
 
 lua require'nvim-tree'.setup {}
-lua require'nvim-tree'.toggle(false, false)
+" lua require'nvim-tree'.toggle(false, false)
 
 colorscheme deep-space
 
@@ -59,6 +59,7 @@ set shiftwidth=4
 set background=dark
 set termguicolors
 
+nnoremap <C-t> :NvimTreeOpen<CR>
 nmap <F8> :TagbarToggle<CR>
 
 
