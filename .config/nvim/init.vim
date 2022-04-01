@@ -45,13 +45,14 @@ colorscheme deep-space
 
 syntax on
 set number
+set relativenumber
 set nohlsearch
 set colorcolumn=80
 set shell=/usr/bin/zsh
 set shellcmdflag=-ic
 
 "tab
-set expandtab   
+set expandtab
 set tabstop=4
 set shiftwidth=4
 
@@ -68,9 +69,9 @@ nmap <F8> :TagbarToggle<CR>
 function! IsHexColorLight(color) abort
   let l:raw_color = trim(a:color, '#')
 
-  let l:red = str2nr(substitute(l:raw_color, '(.{2}).{4}', '1', 'g'), 16)
+  let l:red = str2nr(substitute(l:raw_color,   '(.{2}).{4}', '1', 'g'), 16)
   let l:green = str2nr(substitute(l:raw_color, '.{2}(.{2}).{2}', '1', 'g'), 16)
-  let l:blue = str2nr(substitute(l:raw_color, '.{4}(.{2})', '1', 'g'), 16)
+  let l:blue = str2nr(substitute(l:raw_color,  '.{4}(.{2})', '1', 'g'), 16)
 
   let l:brightness = ((l:red * 299) + (l:green * 587) + (l:blue * 114)) / 1000
 
