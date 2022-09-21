@@ -9,7 +9,6 @@
 * [Qt6 (QML) project template](https://github.com/alionapermes/qt-boilerplate)
 
 ## I use:
----
 
 ### Libraries|Frameworks
 * [fmt](https://conan.io/center/fmt)
