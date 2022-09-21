@@ -5,7 +5,7 @@
 * ~~[vimsouls-editor](https://github.com/alionapermes/vimsouls-editor)~~
 
 ### Boilerplates:
-* [default C++ project template](https://github.com/alionapermes/cpp-boilerplate)
+* [plain C++ project template](https://github.com/alionapermes/cpp-boilerplate)
 * [Qt6 (QML) project template](https://github.com/alionapermes/qt-boilerplate)
 
 ## I use:
