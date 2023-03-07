@@ -4,14 +4,10 @@
 * [tui-menu](https://github.com/alionapermes/tui-menu)
 * ~~[vimsouls-editor](https://github.com/alionapermes/vimsouls-editor)~~
 
-### Boilerplates:
-* [plain C++ project template](https://github.com/alionapermes/cpp-boilerplate)
-* [Qt6 (QML) project template](https://github.com/alionapermes/qt-boilerplate)
-
 ## I use:
 
 ### Libraries|Frameworks
-* [fmt](https://conan.io/center/fmt)
+* [BOOST](https://www.boost.org)
 * [POCO](https://conan.io/center/poco)
 * [Qt](https://conan.io/center/qt)
 * [ftxui](https://conan.io/center/ftxui)
