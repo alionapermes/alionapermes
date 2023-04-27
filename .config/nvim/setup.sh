@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NVIM_PATH="~/.config/nvim"
+NVIM_PATH="$HOME/.config/nvim"
 
 if [[ $1 = "--help" ]]; then
     echo "options:"
@@ -18,6 +18,5 @@ if [[ $1 = "+vimplug" ]]; then
         --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
-cp init.vim ${NVIM_PATH}/init.vim
-cp coc-settings.json ${NVIM_PATH}/coc-settings.json
+cp ./{init.vim,coc-settings.json} ${NVIM_PATH}/
 
